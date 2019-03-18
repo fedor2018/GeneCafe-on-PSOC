@@ -1,0 +1,8 @@
+*.su04759
+codegentemp
+CortexM0
+Generated_Source
+Export
+*.log
+*.rpt
+genecafe-firmware_timing.html
