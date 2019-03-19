@@ -9,7 +9,31 @@
     </Group>
   </Group>
   <Data key="DataVersionKey" value="2" />
-  <Group key="DWRInstGuidMapping" />
+  <Group key="DWRInstGuidMapping">
+    <Group key="Pin">
+      <Data key="6b063d8c-e582-4de4-b81a-beaffdad3bce" value="Pin_B" />
+      <Data key="6f7c7d4c-bc26-4c67-a51b-ea2e0ec13768" value="OVER_C" />
+      <Data key="7ad1dd24-ad52-429c-988e-f6648cf08a3f" value="Pin_BUZ" />
+      <Data key="7c569bdc-340b-4ff2-9a89-7cd2f7f0193d" value="Pin_SSR" />
+      <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Pin_E" />
+      <Data key="9f2ce74e-94be-485b-89e7-719b6971d15e" value="AC_V" />
+      <Data key="41e18486-5959-4e97-b76d-1fb002507582/16a808f6-2e13-45b9-bce0-b001c8655113" value="ADC_Bypass" />
+      <Data key="95d9fac6-62a7-4fad-84df-24b006785333/ed092b9b-d398-4703-be89-cebf998501f6" value="LCD_LCDPort" />
+      <Data key="505d7f12-be6d-4911-9571-be1e0b9720ab" value="Pin_SW1" />
+      <Data key="8146c267-eff8-460b-a5fb-c41116ddcc84" value="Pin_A" />
+      <Data key="19078e11-c64b-48ee-a7b7-32225d40a224" value="Pin_Reed" />
+      <Data key="150927fd-1b8c-4b16-a896-a9fba89a1ec7" value="Pin_Fan" />
+      <Data key="1249550a-1c89-46ab-9592-26fbb04f64cd" value="OVER_Z" />
+      <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="NTC_Chamber" />
+      <Data key="99043842-974b-4bc3-b4ea-30d2acd0061d" value="NTC_Heater" />
+      <Data key="a28bfc61-d8ac-44f8-a94c-0bc654101c86" value="OVER_H" />
+      <Data key="b468db52-5480-4c7e-9348-d6c7a4e30857" value="AC_V_Z" />
+      <Data key="b818fe79-f3c6-4dba-ba13-00911927f74e" value="Pin_LED" />
+      <Data key="db7cb5fa-b297-43f6-a6ad-3cec807a8390/23b8206d-1c77-4e61-be4a-b4037d5de5fc" value="UART_tx" />
+      <Data key="db7cb5fa-b297-43f6-a6ad-3cec807a8390/78e33e5d-45ea-4b75-88d5-73274e8a7ce4" value="UART_rx" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin_Motor" />
+    </Group>
+  </Group>
   <Group key="FlashSecurity">
     <Group key="RowsKey">
       <Group key="0">
@@ -1213,6 +1237,42 @@
         <Data key="src_clk_id" value="25052E45-97E1-4618-A621-47712D88CDFB" />
         <Data key="src_clk_name" value="PLL0_Sel" />
         <Data key="start_on_reset" value="True" />
+      </Group>
+    </Group>
+  </Group>
+  <Group key="Pin2">
+    <Group key="505d7f12-be6d-4911-9571-be1e0b9720ab">
+      <Group key="0">
+        <Data key="Port Format" value="0,7" />
+      </Group>
+    </Group>
+    <Group key="b818fe79-f3c6-4dba-ba13-00911927f74e">
+      <Group key="0">
+        <Data key="Port Format" value="1,6" />
+      </Group>
+    </Group>
+    <Group key="UnAssigned Pins">
+      <Group key="7c569bdc-340b-4ff2-9a89-7cd2f7f0193d">
+        <Data key="0" value="131974625954824542" />
+      </Group>
+      <Group key="150927fd-1b8c-4b16-a896-a9fba89a1ec7">
+        <Data key="0" value="131974626078372582" />
+      </Group>
+    </Group>
+    <Group key="Unlocked Pins">
+      <Group key="db7cb5fa-b297-43f6-a6ad-3cec807a8390/23b8206d-1c77-4e61-be4a-b4037d5de5fc">
+        <Group key="0">
+          <Group key="131974628754338238">
+            <Data key="Port Format" value="4,1" />
+          </Group>
+        </Group>
+      </Group>
+      <Group key="db7cb5fa-b297-43f6-a6ad-3cec807a8390/78e33e5d-45ea-4b75-88d5-73274e8a7ce4">
+        <Group key="0">
+          <Group key="131974628761358148">
+            <Data key="Port Format" value="4,0" />
+          </Group>
+        </Group>
       </Group>
     </Group>
   </Group>
