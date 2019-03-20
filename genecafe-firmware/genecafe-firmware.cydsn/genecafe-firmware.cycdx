@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="AC_V_Z" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="nor_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="OVER_Z" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="OVER_C" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="OVER_H" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Clock_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_BUZ" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Pin_SSR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Reg_SSR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <register name="Reg_SSR_CONTROL_REG" address="0x400F0070" bitWidth="8" desc="" hidden="false" />
+  </block>
+  <block name="nor_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="BUZZER" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -22,15 +20,18 @@
     <register name="PERIOD" address="0x40050114" bitWidth="32" desc="Period value" hidden="false" />
     <register name="PERIOD_BUF" address="0x40050118" bitWidth="32" desc="Period buffer value" hidden="false" />
   </block>
-  <block name="Reg_SSR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="Reg_SSR_CONTROL_REG" address="0x400F0070" bitWidth="8" desc="" hidden="false" />
-  </block>
-  <block name="isr_AC_Z" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_BUZ" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="or_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="PWR_5V_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_BUZ" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="BUZZ" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="AC_V_Z" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="AC_220V_N" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_ADC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="EEPROM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="R_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GND_10" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="SW1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="R_13" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Comp_H" BASE="0x0" SIZE="0x0" desc="Comparator" visible="true" hidden="false">
     <block name="cy_psoc4_abuf" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -92,6 +93,9 @@
     <register name="OA_SLOPE_OFFSET_TRIM" address="0x40100F10" bitWidth="32" desc="Comparator slope offset drift trim" hidden="false" />
     <register name="OA_COMP_TRIM" address="0x40100F14" bitWidth="32" desc="Comparator trim" hidden="false" />
   </block>
+  <block name="OVER_H" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="OVER_Z" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="OVER_C" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Comp_Z" BASE="0x0" SIZE="0x0" desc="Low Power Comparator" visible="true" hidden="false">
     <block name="cy_psoc4_lpcomp_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <register name="_CONFIG" address="0x400A0004" bitWidth="32" desc="LPCOMP configuration" hidden="false">
@@ -147,35 +151,49 @@
     <register name="_TRIM_A" address="0x400AFF00" bitWidth="32" desc="LPCOMP trim A" hidden="false" />
     <register name="_TRIM_B" address="0x400AFF04" bitWidth="32" desc="LPCOMP trim B" hidden="false" />
   </block>
-  <block name="isr_ADC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="R_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="AC_220V_N" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="isr_BUZ" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="D_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="isr_UP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="isr_BUTTON" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GND_9" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="PWR_5V_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="D_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R_8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="D_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="D_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_11" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SSR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_stop" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_capture" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="cy_m0s8_tcpwm_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <register name="COUNTER" address="0x40050148" bitWidth="32" desc="Current counter value" hidden="false" />
+    <register name="CC" address="0x4005014C" bitWidth="32" desc="Compare / capture value" hidden="false" />
+    <register name="CC_BUF" address="0x40050150" bitWidth="32" desc="Compare / capture buffer value" hidden="false" />
+    <register name="PERIOD" address="0x40050154" bitWidth="32" desc="Period value" hidden="false" />
+    <register name="PERIOD_BUF" address="0x40050158" bitWidth="32" desc="Period buffer value" hidden="false" />
+  </block>
+  <block name="R_14" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_lfclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="D_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="D_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="isr_DN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GND_11" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GND_8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="R_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="R_8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="or_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="BUZZ" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="PWR_5V_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="R_12" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="GND_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="R_11" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="R_9" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="R_10" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="PWR_5V" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="D_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_UP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_BUTTON" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_9" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="PWR_5V_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Pin_B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="RotaryEncoder_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+  <block name="GND_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="PWR_5V" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_constant_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="RE" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="not_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -190,8 +208,11 @@
     <block name="nand_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="BTN_B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   </block>
-  <block name="A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="cy_constant_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="NTC_Heater" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="NTC_Chamber" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_E" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Comp_C" BASE="0x0" SIZE="0x0" desc="Comparator" visible="true" hidden="false">
     <block name="cy_psoc4_abuf" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -253,11 +274,7 @@
     <register name="OA_SLOPE_OFFSET_TRIM" address="0x40100F04" bitWidth="32" desc="Comparator slope offset drift trim" hidden="false" />
     <register name="OA_COMP_TRIM" address="0x40100F08" bitWidth="32" desc="Comparator trim" hidden="false" />
   </block>
-  <block name="NTC_Chamber" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_E" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GND_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GND_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Chamber" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="ADC" BASE="0x0" SIZE="0x0" desc="Sequencing SAR ADC" visible="true" hidden="false">
     <block name="cy_analog_noconnect_30" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -991,10 +1008,10 @@
     </register>
   </block>
   <block name="Bootloadable" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="E" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Heater" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="PWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="VMux_capture" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ZeroTerminal_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -1047,26 +1064,29 @@
       </field>
     </register>
   </block>
-  <block name="GND_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Q_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Q_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Geared_Motor_12V" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="ZMPT101B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GND_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Reed" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GND_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="E" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="REED_SENS" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="PWR_12V" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GND_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="AC_V" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="R_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_SW1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="R_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="NTC_Heater" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="R_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Fan" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="FAN_12V_0_52A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Motor" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Q_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Q_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Reed" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R_13" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_10" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Geared_Motor_12V" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="AC_220V_L" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="R_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_SW1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Motor" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="ZMPT101B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="AC_V" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Fan" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="FAN_12V_0_52A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>
