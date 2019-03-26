@@ -1,16 +1,16 @@
 
 CBR-101 BLOW FAN:
-	Frame Dimensions (mm) 75 X 75 X 30
-	Model Part Number     AD7512UB
-	Bearing               BALL 
-	TypeVolts (V)         12
-	Current (A)           0.52
-	Power (W)             6.24
-	Speed (RPM)           4200
-	Air Flow (CFM)        13.1 
-	Pressure (Inches)     0.822 
-	Noise (dB/A)          44.7
-	Weight (g)            80
+|	Frame Dimensions (mm) | 75 X 75 X 30 |
+|	Model Part Number     | AD7512UB     |
+|	Bearing               | BALL         |
+|	TypeVolts (V)         | 12           |
+|	Current (A)           | 0.52         |
+|	Power (W)             | 6.24         |
+|	Speed (RPM)           | 4200         |
+|	Air Flow (CFM)        | 13.1         |
+|	Pressure (Inches)     | 0.822        |
+|	Noise (dB/A)          | 44.7         |
+|	Weight (g)            | 80           |
 
 CBR-101 GEARED MOTOR ASSEMBLY:
 	Kysan RB350060-30Q01R
