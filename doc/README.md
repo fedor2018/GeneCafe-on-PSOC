@@ -27,3 +27,24 @@ __Gene Cafe CBR-101 Error Codes__
 	E3 Error: Irregular Rotation, Reed Sensor Failure.
 	E4 Error: Heater Disconnection, or Temperature Sensor 2 Error.  
 ```
+__Display__
+```
+ |0123456789012345
+0|T 200>>215 350 H| heat
+1|t 15.6 +024 220V|
+  ----------------
+0|T 150>>60      C| cool
+1|t  5.6      220V|
+  ----------------
+0|T 215          S| stop
+1|t 20.4      220V|
+  ----------------
+0|T 150>>60     Ex| error
+1|t  5.6      220V|
+  ----------------
+0|    Error X     | error
+1|            220V|
+  ----------------
+```
+
+

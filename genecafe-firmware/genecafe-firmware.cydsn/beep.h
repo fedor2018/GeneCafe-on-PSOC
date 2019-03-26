@@ -1,0 +1,26 @@
+/* ========================================
+ *
+ * Copyright YOUR COMPANY, THE YEAR
+ * All Rights Reserved
+ * UNPUBLISHED, LICENSED SOFTWARE.
+ *
+ * CONFIDENTIAL AND PROPRIETARY INFORMATION
+ * WHICH IS THE PROPERTY OF your company.
+ *
+ * ========================================
+*/
+#include "project.h"
+
+#define BEEP_DELAY_ms(m)  (1*m)//1kHz->1ms
+#define BEEP_ON     Pin_Buzzer_Write(0);Pin_Led_Write(1);
+#define BEEP_OFF    Pin_Buzzer_Write(1);Pin_Led_Write(0);
+#define BEEP_IS_ON  (Pin_Buzzer_Read()==0)
+
+int beep_stat();
+void beep_init();
+void beep(uint16 delay);
+void beepn(uint16 delay, uint8 num);
+void read_buz(char *s);
+CY_ISR_PROTO(ISR_BUZ_Handler);
+
+/* [] END OF FILE */
