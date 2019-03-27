@@ -1,4 +1,11 @@
-
+__SENS1 172__
+```
+        273K -> 23C
+``` 
+__SENS2 121__
+```
+        284K -> 23C
+```
 __CBR-101 BLOW FAN:__
 ```
 	Frame Dimensions (mm)  75 X 75 X 30 
@@ -15,6 +22,7 @@ __CBR-101 BLOW FAN:__
 ```
 __CBR-101 GEARED MOTOR ASSEMBLY:__
 ```
+        roast -> 14V, end -> 7V
 	Kysan RB350060-30Q01R
 	RB-37GM32-12V1/60 
 	MOTOR,GEARED,37MM,B,12VDC,104RPM
@@ -29,6 +37,8 @@ __Gene Cafe CBR-101 Error Codes__
 ```
 __Display__
 ```
+T=60-250C
+t=0-30min
  |0123456789012345
 0|T 200>>215 350 H| heat
 1|t 15.6 +024 220V|
